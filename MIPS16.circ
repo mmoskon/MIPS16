@@ -382,6 +382,25 @@ end TCL_Generic;&#13;
       <a name="fanout" val="4"/>
       <a name="incoming" val="16"/>
     </comp>
+    <comp lib="0" loc="(3090,540)" name="Splitter">
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="3"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+      <a name="bit2" val="3"/>
+      <a name="bit4" val="2"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="16"/>
+    </comp>
     <comp lib="0" loc="(3130,1060)" name="Splitter">
       <a name="bit0" val="3"/>
       <a name="bit1" val="3"/>
@@ -531,7 +550,6 @@ end TCL_Generic;&#13;
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="asyncread" val="true"/>
-      <a name="clearpin" val="true"/>
       <a name="dataWidth" val="16"/>
       <a name="label" val="DATA_MEM"/>
     </comp>
@@ -635,14 +653,23 @@ a12a a7ef a921 534 89e0 491d 8da0 8520
     <comp lib="5" loc="(3170,240)" name="Hex Digit Display">
       <a name="labelvisible" val="true"/>
     </comp>
+    <comp lib="5" loc="(3180,490)" name="Hex Digit Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
     <comp lib="5" loc="(3210,240)" name="Hex Digit Display">
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(3220,1010)" name="Hex Digit Display">
       <a name="labelvisible" val="true"/>
     </comp>
+    <comp lib="5" loc="(3220,490)" name="Hex Digit Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
     <comp lib="5" loc="(3250,240)" name="Hex Digit Display"/>
     <comp lib="5" loc="(3260,1010)" name="Hex Digit Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(3260,490)" name="Hex Digit Display">
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(3270,1420)" name="Hex Digit Display">
@@ -650,6 +677,9 @@ a12a a7ef a921 534 89e0 491d 8da0 8520
     </comp>
     <comp lib="5" loc="(3290,240)" name="Hex Digit Display"/>
     <comp lib="5" loc="(3300,1010)" name="Hex Digit Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(3300,490)" name="Hex Digit Display">
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(3310,1420)" name="Hex Digit Display">
@@ -859,6 +889,10 @@ a12a a7ef a921 534 89e0 491d 8da0 8520
     <comp lib="8" loc="(3103,205)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="ADDR"/>
+    </comp>
+    <comp lib="8" loc="(3117,469)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="write_data"/>
     </comp>
     <comp lib="8" loc="(3157,989)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -1095,7 +1129,9 @@ a12a a7ef a921 534 89e0 491d 8da0 8520
     <wire from="(2820,860)" to="(2820,870)"/>
     <wire from="(2830,1400)" to="(2830,1410)"/>
     <wire from="(2860,1020)" to="(2860,1040)"/>
-    <wire from="(2860,360)" to="(2860,710)"/>
+    <wire from="(2860,360)" to="(2860,540)"/>
+    <wire from="(2860,540)" to="(2860,710)"/>
+    <wire from="(2860,540)" to="(3090,540)"/>
     <wire from="(2860,710)" to="(2930,710)"/>
     <wire from="(2860,860)" to="(2860,880)"/>
     <wire from="(2870,1400)" to="(2870,1420)"/>
@@ -1124,6 +1160,10 @@ a12a a7ef a921 534 89e0 491d 8da0 8520
     <wire from="(3100,260)" to="(3210,260)"/>
     <wire from="(3100,270)" to="(3250,270)"/>
     <wire from="(3100,280)" to="(3290,280)"/>
+    <wire from="(3110,500)" to="(3180,500)"/>
+    <wire from="(3110,510)" to="(3220,510)"/>
+    <wire from="(3110,520)" to="(3260,520)"/>
+    <wire from="(3110,530)" to="(3300,530)"/>
     <wire from="(3130,1410)" to="(3130,1440)"/>
     <wire from="(3150,1020)" to="(3220,1020)"/>
     <wire from="(3150,1030)" to="(3260,1030)"/>
@@ -1131,17 +1171,21 @@ a12a a7ef a921 534 89e0 491d 8da0 8520
     <wire from="(3150,1050)" to="(3340,1050)"/>
     <wire from="(3170,1410)" to="(3170,1450)"/>
     <wire from="(3170,240)" to="(3170,250)"/>
+    <wire from="(3180,490)" to="(3180,500)"/>
     <wire from="(3200,1430)" to="(3270,1430)"/>
     <wire from="(3200,1440)" to="(3310,1440)"/>
     <wire from="(3200,1450)" to="(3350,1450)"/>
     <wire from="(3200,1460)" to="(3390,1460)"/>
     <wire from="(3210,240)" to="(3210,260)"/>
     <wire from="(3220,1010)" to="(3220,1020)"/>
+    <wire from="(3220,490)" to="(3220,510)"/>
     <wire from="(3250,240)" to="(3250,270)"/>
     <wire from="(3260,1010)" to="(3260,1030)"/>
+    <wire from="(3260,490)" to="(3260,520)"/>
     <wire from="(3270,1420)" to="(3270,1430)"/>
     <wire from="(3290,240)" to="(3290,280)"/>
     <wire from="(3300,1010)" to="(3300,1040)"/>
+    <wire from="(3300,490)" to="(3300,530)"/>
     <wire from="(3310,1420)" to="(3310,1440)"/>
     <wire from="(3340,1010)" to="(3340,1050)"/>
     <wire from="(3350,1420)" to="(3350,1450)"/>
